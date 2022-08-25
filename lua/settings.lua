@@ -2,6 +2,7 @@ local o = vim.o      --Global Options
 local wo = vim.wo    --Window-local Options
 local bo = vim.bo    --Buffer-local Options 
 
+local cmd = vim.cmd
 
 
 -----------------		
@@ -52,7 +53,7 @@ o.clipboard = 'unnamedplus'
 --o.listchars = { tab = ">>>", trail = "·", precedes = "←", extends = "→",eol = "↲", nbsp = "␣" }
 o.laststatus = 3 
 o.timeoutlen = 500
-
+o.termguicolors = true
 
 
 -----------------------
@@ -88,5 +89,14 @@ bo.shiftwidth = 2
 
 
 
+cmd[[autocmd BufReadPost * lua goto_last_pos()]]
+function goto_last_pos()
+  local last_pos = vim.fn.line("'\"")
+  if last_pos > 0 and last_pos <= vim.fn.line("$") then
+    vim.api.nvim_win_set_cursor(0, {last_pos, 0})
+  end
+end
+
+cmd 'au TextYankPost * silent! lua vim.highlight.on_yank()'
 
 
