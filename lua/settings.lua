@@ -15,8 +15,8 @@ o.smartcase = true
 o.laststatus = 2
 o.hlsearch = true
 o.incsearch = true
-o.ignorecase = true
-o.scrolloff = 12
+--[[ o.ignorecase = true ]]
+--[[ o.scrolloff = 12 ]]
 -- ... snip ... 
 
 

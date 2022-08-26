@@ -10,4 +10,10 @@ vim.g.mapleader = ' '  -- 'vim.g' sets global variables
 --------------------
 --Telescope
 --------------------
+map ('n', '<C-P>', '<cmd>Telescope find_files<cr>', {noremap = true})
+map ('n', '<C-F>', '<cmd>Telescope live_grep<cr>', {noremap = true})
 
+--------------------
+--vim-visual-multi
+--------------------
+--map ('n', '<C-D>', 'Find Under', {noremap = true})
