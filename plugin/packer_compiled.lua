@@ -135,11 +135,27 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/csv.vim",
     url = "https://github.com/chrisbra/csv.vim"
   },
+  edge = {
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/edge",
+    url = "https://github.com/sainnhe/edge"
+  },
+  everforest = {
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/everforest",
+    url = "https://github.com/sainnhe/everforest"
+  },
   ["feline.nvim"] = {
     config = { "require'plugins.feline'" },
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/feline.nvim",
     url = "https://github.com/famiu/feline.nvim"
+  },
+  ["fidget.nvim"] = {
+    config = { "require'plugins.fidget'" },
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
   },
   ["formatter.nvim"] = {
     config = { "require'plugins.formatter'" },
@@ -167,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
+  },
+  melange = {
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/melange",
+    url = "https://github.com/savq/melange"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -202,6 +223,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-tree.lua"] = {
+    config = { "require'plugins.nvimtree'" },
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     config = { "require'plugins.treesitter'" },
@@ -251,6 +278,11 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
@@ -261,6 +293,11 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/vim-devicons",
@@ -270,6 +307,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/vim-easy-align",
     url = "https://github.com/junegunn/vim-easy-align"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["vim-matchup"] = {
     loaded = true,
@@ -296,42 +338,50 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-require'plugins.feline'
-time([[Config for feline.nvim]], false)
 -- Config for: nvim-cokeline
 time([[Config for nvim-cokeline]], true)
 require'plugins.nvim-cokeline'
 time([[Config for nvim-cokeline]], false)
--- Config for: formatter.nvim
-time([[Config for formatter.nvim]], true)
-require'plugins.formatter'
-time([[Config for formatter.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require'plugins.nvim-autopairs'
 time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require'plugins.nvimtree'
+time([[Config for nvim-tree.lua]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require'plugins.treesitter'
 time([[Config for nvim-treesitter]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+require'plugins.feline'
+time([[Config for feline.nvim]], false)
+-- Config for: fidget.nvim
+time([[Config for fidget.nvim]], true)
+require'plugins.fidget'
+time([[Config for fidget.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 require'plugins.comment'
 time([[Config for Comment.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require'plugins.indent-blankline'
-time([[Config for indent-blankline.nvim]], false)
 -- Config for: nvim-ts-autotag
 time([[Config for nvim-ts-autotag]], true)
 require'plugins.nvim-ts-autotag'
 time([[Config for nvim-ts-autotag]], false)
+-- Config for: formatter.nvim
+time([[Config for formatter.nvim]], true)
+require'plugins.formatter'
+time([[Config for formatter.nvim]], false)
 -- Config for: nvim-ts-rainbow
 time([[Config for nvim-ts-rainbow]], true)
 require'plugins.nvim-ts-rainbow'
 time([[Config for nvim-ts-rainbow]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require'plugins.indent-blankline'
+time([[Config for indent-blankline.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

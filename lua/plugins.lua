@@ -33,19 +33,24 @@ return require('packer').startup(function(use)
   ---------------------------
   -- Colorschemes
   ---------------------------
-  use { 'sainnhe/gruvbox-material' }
   use { 'catppuccin/nvim', as = 'catppuccin' }
+  use { 'sainnhe/edge' }
+  use { 'sainnhe/everforest' }
+  use { 'sainnhe/sonokai' }
+  use { 'sainnhe/gruvbox-material' }
   use {	'navarasu/onedark.nvim' }
   use { 'EdenEast/nightfox.nvim' }
-  --[[ use { 'jacoborus/tender.vim'' } ]]
-
+  use { "savq/melange" }
+  use { 'folke/tokyonight.nvim' }
+  
   ---------------------------
   -- LSP
   ---------------------------
   use { 'neovim/nvim-lspconfig' }
   use { 'onsails/lspkind-nvim' }
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }  
-
+  use { 'j-hui/fidget.nvim',  config = lua_path"fidget" }
+  
   ---------------------------
   -- Autocomplete
   ---------------------------
@@ -71,8 +76,9 @@ return require('packer').startup(function(use)
   use { 'chrisbra/csv.vim' }
   use { 'junegunn/vim-easy-align' }
   use { 'mhartington/formatter.nvim', config = lua_path"formatter" }
-  use { 'zdharma-continuum/zinit-vim-syntax' }
   use { 'numToStr/Comment.nvim', config = lua_path"comment"}
+  use { 'zdharma-continuum/zinit-vim-syntax' }
+  use { 'RRethy/vim-illuminate' }
   
   ---------------------------
   -- Icons
@@ -85,9 +91,13 @@ return require('packer').startup(function(use)
   ---------------------------
   use { 'famiu/feline.nvim', config = lua_path"feline" }
   use { 'kazhala/close-buffers.nvim' }
-  use { 'noib3/nvim-cokeline', config = lua_path"nvim-cokeline" }
+  use { 'noib3/nvim-cokeline', config = lua_path"nvim-cokeline" } -- ALTERNATIVES: barbar.nvim, tabby.nvim 
   
-  
+  ---------------------------
+  -- Explorer
+  ---------------------------
+  use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvimtree" }
+
   ---------------------------
   -- Treesitter
   ---------------------------
