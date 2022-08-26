@@ -80,11 +80,6 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
-  ["close-buffers.nvim"] = {
-    loaded = true,
-    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/close-buffers.nvim",
-    url = "https://github.com/kazhala/close-buffers.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -145,12 +140,6 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
-  ["feline.nvim"] = {
-    config = { "require'plugins.feline'" },
-    loaded = true,
-    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/feline.nvim",
-    url = "https://github.com/famiu/feline.nvim"
-  },
   ["fidget.nvim"] = {
     config = { "require'plugins.fidget'" },
     loaded = true,
@@ -184,10 +173,22 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
+  ["lualine.nvim"] = {
+    config = { "require'plugins.lualine'" },
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   melange = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/melange",
     url = "https://github.com/savq/melange"
+  },
+  ["modes.nvim"] = {
+    config = { "\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmodes\frequire\0" },
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/modes.nvim",
+    url = "https://github.com/mvllow/modes.nvim"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -223,6 +224,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    config = { "require'plugins.nvim-notify'" },
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     config = { "require'plugins.nvimtree'" },
@@ -298,6 +305,11 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/vim-devicons",
@@ -330,6 +342,12 @@ _G.packer_plugins = {
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
   },
+  ["which-key.nvim"] = {
+    config = { "require'plugins.which-key'" },
+    loaded = true,
+    path = "/home/swipe/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
+  },
   ["zinit-vim-syntax"] = {
     loaded = true,
     path = "/home/swipe/.local/share/nvim/site/pack/packer/start/zinit-vim-syntax",
@@ -338,50 +356,62 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-cokeline
-time([[Config for nvim-cokeline]], true)
-require'plugins.nvim-cokeline'
-time([[Config for nvim-cokeline]], false)
+-- Config for: modes.nvim
+time([[Config for modes.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmodes\frequire\0", "config", "modes.nvim")
+time([[Config for modes.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require'plugins.nvim-autopairs'
 time([[Config for nvim-autopairs]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require'plugins.nvimtree'
-time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require'plugins.treesitter'
-time([[Config for nvim-treesitter]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-require'plugins.feline'
-time([[Config for feline.nvim]], false)
--- Config for: fidget.nvim
-time([[Config for fidget.nvim]], true)
-require'plugins.fidget'
-time([[Config for fidget.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-require'plugins.comment'
-time([[Config for Comment.nvim]], false)
--- Config for: nvim-ts-autotag
-time([[Config for nvim-ts-autotag]], true)
-require'plugins.nvim-ts-autotag'
-time([[Config for nvim-ts-autotag]], false)
--- Config for: formatter.nvim
-time([[Config for formatter.nvim]], true)
-require'plugins.formatter'
-time([[Config for formatter.nvim]], false)
--- Config for: nvim-ts-rainbow
-time([[Config for nvim-ts-rainbow]], true)
-require'plugins.nvim-ts-rainbow'
-time([[Config for nvim-ts-rainbow]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
 require'plugins.indent-blankline'
 time([[Config for indent-blankline.nvim]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require'plugins.nvim-notify'
+time([[Config for nvim-notify]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require'plugins.which-key'
+time([[Config for which-key.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require'plugins.nvimtree'
+time([[Config for nvim-tree.lua]], false)
+-- Config for: fidget.nvim
+time([[Config for fidget.nvim]], true)
+require'plugins.fidget'
+time([[Config for fidget.nvim]], false)
+-- Config for: nvim-ts-autotag
+time([[Config for nvim-ts-autotag]], true)
+require'plugins.nvim-ts-autotag'
+time([[Config for nvim-ts-autotag]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require'plugins.lualine'
+time([[Config for lualine.nvim]], false)
+-- Config for: formatter.nvim
+time([[Config for formatter.nvim]], true)
+require'plugins.formatter'
+time([[Config for formatter.nvim]], false)
+-- Config for: nvim-cokeline
+time([[Config for nvim-cokeline]], true)
+require'plugins.nvim-cokeline'
+time([[Config for nvim-cokeline]], false)
+-- Config for: nvim-ts-rainbow
+time([[Config for nvim-ts-rainbow]], true)
+require'plugins.nvim-ts-rainbow'
+time([[Config for nvim-ts-rainbow]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require'plugins.treesitter'
+time([[Config for nvim-treesitter]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+require'plugins.comment'
+time([[Config for Comment.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

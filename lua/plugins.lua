@@ -89,10 +89,11 @@ return require('packer').startup(function(use)
   ---------------------------
   -- Status Line and Bufferline
   ---------------------------
-  use { 'famiu/feline.nvim', config = lua_path"feline" }
-  use { 'kazhala/close-buffers.nvim' }
-  use { 'noib3/nvim-cokeline', config = lua_path"nvim-cokeline" } -- ALTERNATIVES: barbar.nvim, tabby.nvim 
-  
+  --[[ use { 'famiu/feline.nvim', config = lua_path"feline" } ]]
+  use { 'nvim-lualine/lualine.nvim', config = lua_path"lualine"}
+  use { 'noib3/nvim-cokeline', config = lua_path"nvim-cokeline" } -- ALTERNATIVES: barbar.nvim, tabby.nvim, bufferline?  
+  --[[ use { 'kazhala/close-buffers.nvim' } ]]
+
   ---------------------------
   -- Explorer
   ---------------------------
@@ -108,6 +109,12 @@ return require('packer').startup(function(use)
   use { 'lewis6991/nvim-treesitter-context' }
   --use { 'SmiteshP/nvim-gps', config = lua_path"nvim-gps" }
 
+  ---------------------------
+  -- Folk
+  ---------------------------
+  use { 'folke/trouble.nvim' }
+  --[[ use { 'folke/todo-comments.nvim', config = lua_path"todo-comments" } ]]
+  use { 'folke/which-key.nvim', config = lua_path"which-key" }
 
   ---------------------------
   -- Telescope
@@ -120,6 +127,20 @@ return require('packer').startup(function(use)
   -- Other
   ---------------------------
   use { 'mg979/vim-visual-multi' , event = "BufReadPre" }
+
+  --[[ use { 'machakann/vim-sandwich', config = lua_path"sandwich" } ]]
+  use { 'rcarriga/nvim-notify', config = lua_path"nvim-notify" }
+  --[[ use { 'airblade/vim-rooter', config = lua_path"vim-rooter" } ]]
+  --[[ use { 'goolord/alpha-nvim', config = lua_path"alpha-nvim" } ]]
+  --[[ use { 'jeffkreeftmeijer/vim-numbertoggle' } ]]
+  --[[ use { 'lambdalisue/suda.vim' } ]]
+  --[[ use { 'numtostr/FTerm.nvim', config = lua_path"fterm" } ]]
+  --[[ use { 'wfxr/minimap.vim', config = lua_path"minimap" } ]]
+  --[[ use { 'luukvbaal/stabilize.nvim', config = lua_path"stabilize" } ]]
+  --[[ use { 'beauwilliams/focus.nvim', config = lua_path"focus" } ]]
+  --[[ use { 'kevinhwang91/nvim-bqf' } ]]
+  use ({'mvllow/modes.nvim',config = function() require('modes').setup() end })
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
