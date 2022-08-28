@@ -1,7 +1,10 @@
 -- init.lua
-require('settings') -- lua/settings.lua 
+require('settings.settings') -- lua/settings.lua 
 require('plugins') -- lua/plugins.lua
-require('keymap') -- lua/keymap.lua 
-
+require('settings.keymap') -- lua/keymap.lua 
+require('settings.completion')
 
 vim.cmd 'colorscheme onedark'
+
+
+

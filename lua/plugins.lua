@@ -46,6 +46,8 @@ return require('packer').startup(function(use)
   ---------------------------
   -- LSP
   ---------------------------
+  use { 'williamboman/mason.nvim', config = lua_path"mason" }
+  use { 'williamboman/mason-lspconfig.nvim', config = lua_path"mason-lspconfig" }
   use { 'neovim/nvim-lspconfig' }
   use { 'onsails/lspkind-nvim' }
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }  
@@ -58,6 +60,7 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'hrsh7th/cmp-buffer' }
   use { 'hrsh7th/cmp-vsnip' }
+  use { 'hrsh7th/cmp-nvim-lua' }
   use { 'hrsh7th/vim-vsnip' }
   use { 'hrsh7th/cmp-path' }
   use { 'hrsh7th/cmp-calc' }
@@ -124,6 +127,13 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzy-native.nvim' }
 
   ---------------------------
+  -- Debugger
+  --------------------------- 
+  use { 'mfussenegger/nvim-dap', config = lua_path"nvim-dap" }
+  use { 'rcarriga/nvim-dap-ui', config = lua_path"nvim-dap-ui" }
+  use { 'theHamsta/nvim-dap-virtual-text', config = lua_path"nvim-dap-virtual-text" }
+
+  ---------------------------
   -- Other
   ---------------------------
   use { 'mg979/vim-visual-multi' , event = "BufReadPre" }
@@ -149,4 +159,5 @@ return require('packer').startup(function(use)
   end
 
 end)
+
 
