@@ -4,7 +4,7 @@ require('plugins') -- lua/plugins.lua
 require('settings.keymap') -- lua/keymap.lua 
 require('settings.completion')
 
-vim.cmd 'colorscheme onedark'
+vim.cmd 'colorscheme vscode'
 
 
 
