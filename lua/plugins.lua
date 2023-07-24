@@ -23,7 +23,10 @@ vim.cmd [[packadd packer.nvim]]
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 
 
-require('packer').init({display = {auto_clean = false}})
+require('packer').init({
+        --[[ git = {update ='pull --ff-only --progress --rebase=true'} ]]
+	display = {auto_clean = false}
+})
 return require('packer').startup(function(use)
   
   -- Load lua path
@@ -60,7 +63,7 @@ return require('packer').startup(function(use)
   use { 'neovim/nvim-lspconfig' }
   use { 'onsails/lspkind-nvim' }
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }  
-  use { 'j-hui/fidget.nvim',  config = lua_path"fidget" }
+  use { 'j-hui/fidget.nvim', tag = 'legacy', config = lua_path"fidget" }
   
   ---------------------------
   -- Autocomplete
